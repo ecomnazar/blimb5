@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ecomnazar.github.io/blimb2",
+  "homepage": "http://ecomnazar.github.io/blimb4",
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-slider": "^1.1.0",
