@@ -21,6 +21,12 @@ $color3: #333;
     right: 3%;
 }
 
+.volume2{
+    background-image: url(./images/volume2.png);
+    background-position: top;
+    height: 18px;
+}
+
 .SliderRoot {
     position: fixed;
     top: 30%;
@@ -156,6 +162,7 @@ body {
 
         p {
             margin-left: 10px;
+            margin-right: 10px;
             padding: 4px 8px;
             color: #fff;
             border-radius: 5px;

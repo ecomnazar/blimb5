@@ -15,7 +15,7 @@ interface HeaderProps{
 export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) => {
 
     const [hideVolume, setHideVolume] = React.useState(false)
-    const [volume, setVolume] = React.useState<number>(0)
+    const [volume, setVolume] = React.useState<number>(99)
     const songList = ['song', 'song2']
     const ringIcon = ['images/bell.png', 'images/bell2.png', '3']
     const [songIndex, setSongIndex] = React.useState(0)
@@ -333,7 +333,7 @@ const onClickBack = () => {
                         </ul>}
                     </div>
                     <div className="ring">
-                        <p onClick={() => setHideVolume(!hideVolume)}><img className='thirdbell' src='images/volume.png' alt="" /></p>
+                        <p className='thirdbell volume2' onClick={() => setHideVolume(!hideVolume)}></p>
                     </div>
                 </div>
             </div>
