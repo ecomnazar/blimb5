@@ -352,7 +352,7 @@ const onClickBack = () => {
             </div>
             <div className={hide ? 'headerMiddle2Hide' : 'headerMiddle2'}>
                 {/* <img className='eye2' src="images/eye.png" alt="" /> */}
-                <div className='eyebackground'></div>
+                {/* <div className='eyebackground'></div> */}
                 <div className="startdiv">
                 <button className='button' onClick={onClickStart}>{langData[activeIndex].guideButtonTwo}</button>
                 <a href="">{langData[activeIndex].recom}</a>
@@ -365,7 +365,7 @@ const onClickBack = () => {
 
 
 
-            <Params volume={volume} setHideVolume={setHideVolume} onClickIndex1={onClickIndex1} onClickIndex2={onClickIndex2} onClickIndex3={onClickIndex3} onClickLanguage={onClickLanguage} activeIndex={activeIndex}/>
+            <Params volume={volume} setHideVolume={setHideVolume} onClickIndex1={onClickIndex1} onClickIndex2={onClickIndex2} onClickIndex3={onClickIndex3} onClickLanguage={onClickLanguage} activeIndex={activeIndex} hide={hide}/>
 
 
 

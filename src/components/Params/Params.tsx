@@ -9,11 +9,12 @@ interface ParamsProps{
     onClickIndex2: () => void,
     onClickIndex3: () => void,
     onClickLanguage: () => void,
-    activeIndex: number
+    activeIndex: number,
+    hide: boolean
 }
 
 
-const Params = ({ volume, setHideVolume, onClickIndex1, onClickIndex2, onClickIndex3, onClickLanguage, activeIndex }: ParamsProps) => {
+const Params = ({ volume, setHideVolume, onClickIndex1, onClickIndex2, onClickIndex3, onClickLanguage, activeIndex, hide }: ParamsProps) => {
 
     const [selectedBell, setSelectedBell] = React.useState(0)
     const [visibleIcons, setVisibleIcons] = React.useState(false)
@@ -49,6 +50,8 @@ const Params = ({ volume, setHideVolume, onClickIndex1, onClickIndex2, onClickIn
 
     return (
     <div className={styles.root}>
+
+        <div className={hide ? styles.eye10 : styles.eye}></div>
 
         <div className={styles.lang}>
             <h2 className={styles.langh2}onClick={onClickLanguage}>{languages[activeIndex]}</h2>

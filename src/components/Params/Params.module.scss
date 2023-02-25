@@ -7,6 +7,25 @@
     justify-content: space-around;
 }
 
+.eye, .eye2, .eye3, .eye4, .eye5, .eye6, .eye7, .eye8, .eye9, .eye10{
+    position: absolute;
+    top: 50%;
+    left: -567%;
+    background-image: url(images/eye.png);
+    width: 100px;
+    background-size: 100px;
+    height: 58px;
+    transition-duration: .8s;
+}
+
+.eye{
+    background-position-y: 0;
+}
+.eye10{
+    background-position-y: -810px;
+    opacity: 0;
+}
+
 .lang{
     h2{
         cursor: pointer;
