@@ -5,6 +5,7 @@ import song from '../../../public/music.wav'
 import song2 from '../../../public/music2.mp3'
 import {Howl} from 'howler'
 import Slider from '../Slider/Slider'
+import Params from '../Params/Params'
 
 interface HeaderProps{
     langData: IData[],
@@ -46,6 +47,14 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
       Sounds.play()
   }
 
+  const soundPlay4 = () => {
+    const Sounds = new Howl({
+        src: song,
+        volume: 0
+      })
+      Sounds.play()
+  }
+
 
   const onClickIndex1 = () => {
     setSongIndex(0)
@@ -58,6 +67,9 @@ const onClickIndex2 = () => {
     soundPlay2()
 }
 
+const onClickIndex3 = () => {
+    soundPlay4()
+}
 
   const languages = ['Ru', 'En', 'Ua']
   const [hide, setHide] = React.useState(false)
@@ -324,7 +336,7 @@ const onClickBack = () => {
                     </div>
                 </div>
                 <div className='row2'>
-                    <h2 className='lgh2' onClick={onClickLanguage}>{languages[activeIndex]}</h2>
+                    {/* <h2 className='lgh2' onClick={onClickLanguage}>{languages[activeIndex]}</h2> */}
                     <div className='ring'>
                         <p onClick={() => setRingHide(!ringHide)}><img className='thirdbell' src={ringIcon[songIndex]} alt="" /></p>
                         {ringHide && <ul>
@@ -346,6 +358,17 @@ const onClickBack = () => {
                 </div>
             </div>
             {/*  */}
+
+
+
+
+
+
+            <Params volume={volume} setHideVolume={setHideVolume} onClickIndex1={onClickIndex1} onClickIndex2={onClickIndex2} onClickIndex3={onClickIndex3} onClickLanguage={onClickLanguage} activeIndex={activeIndex}/>
+
+
+
+
             <div className={hide1 ? 'headerMiddle' : 'headerMiddleHide'}>
                 <div className="mini mini2">
                 <h2>{langData[activeIndex].guide}</h2>
@@ -377,6 +400,17 @@ const onClickBack = () => {
             </div>
             {/*  */}
             
+
+
+
+
+
+
+
+
+
+
+
             <div className={hide2 ? 'headerMiddle' : 'headerMiddleHide'}>
                 <div className="box4"></div>
                 <div className="mini">

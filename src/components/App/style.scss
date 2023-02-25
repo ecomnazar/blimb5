@@ -17,8 +17,8 @@ $color3: #333;
 
 .volume {
     position: absolute;
-    top: 30%;
-    right: 4.7%;
+    top: 35%;
+    right: 0%;
     transform: rotate(270deg);
 }
 
@@ -155,6 +155,7 @@ body {
     }
     .ring {
         position: relative;
+        opacity: 0;
 
         .thirdbell {
             margin-left: 0 !important;

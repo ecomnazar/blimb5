@@ -1,0 +1,94 @@
+.root{
+    position: fixed;
+    top: 27%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.lang{
+    h2{
+        cursor: pointer;
+        font-size: 14px;
+        margin-right: 10px;
+        border: 1px solid #fff;
+        padding: 5px;
+        border-radius: 3px;
+        color: #FFF;
+        font-weight: normal;
+        margin-top: -3px;
+    }
+}
+
+.volume, .volume1, .volume2, .volume3{
+    width: 25px;
+    height: 19px;
+    background-image: url(images/volume2.png);
+    background-repeat: no-repeat;
+    background-position-y: 0px;
+    opacity: 0.8;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.volume1{
+    background-position-y: 0;
+}
+
+.volume2{
+    background-position-y: -18px;
+}
+
+.volume3{
+    background-position-y: -36px;
+}
+
+.volume3{
+    background-position-y: -54px;
+}
+
+
+.bellVisible{
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease-in-out;
+}
+
+.bellHidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+
+
+.bellgroup{
+    margin-right: 10px;
+}
+
+.bell1, .bell2, .bell3{
+    background-image: url(images/bellicons.png);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.bell1{
+    background-position-y: 0px;
+}
+
+.bell2{
+    background-position-y: -35px;
+}
+
+.bell3{
+    background-position-y: -67px;
+    margin-bottom: 7px;
+}
