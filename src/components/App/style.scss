@@ -18,8 +18,14 @@ $color3: #333;
 .volume, .volume3 {
     position: absolute;
     top: 35%;
-    right: 0%;
+    right: -1.2%;
     transform: rotate(270deg);
+}
+
+@media only screen and (max-width: 515px){
+    .volume, .volume3{
+        right: -6.5%;
+    }
 }
 
 .volume3{

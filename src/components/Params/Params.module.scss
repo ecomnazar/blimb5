@@ -1,25 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .root{
     position: fixed;
-    top: 27%;
+    top: 17%;
     right: 0%;
-    transform: translate(-50%, -50%);
+    padding: 0 40px;
     display: flex;
-    justify-content: space-around;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
 }
+
+.row{
+    display: flex;
+    align-items: start;
+}
+
+.rel{
+    position: relative;
+}
+
+.firsteye{
+    background-image: url(images/eye.png);
+    width: 70px;
+    height: 40px;
+    background-size: 70px;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.inp{
+    transform: rotate(270deg);
+    position: absolute;
+    right: -0.8%;
+    top: 80%;
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease-in-out;
+}
+
+.inpHide{
+    transform: rotate(270deg);
+    position: absolute;
+    right: -0.8%;
+    top: 80%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+
+@media only screen and (max-width: 800px){
+    .inp, .inpHide{
+        right: -2%;
+    }
+}
+
+@media only screen and (max-width: 515px){
+    .inp, .inpHide{
+        right: -7%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .inp, .inpHide{
+        right: -9%;
+    }
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid transparent;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 30px;
+    width: 13px;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11px;
+    opacity: .8;
+    &:hover{
+        opacity: 1;
+    }
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+  }
+
+.firsteyeHide{
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+
 
 .eye, .eye2, .eye3, .eye4, .eye5, .eye6, .eye7, .eye8, .eye9, .eye10{
     position: absolute;
-    top: 50%;
-    left: -567%;
+    top: 40%;
+    left: 50%;
     background-image: url(images/eye.png);
     width: 100px;
+    transform: translateX(-50%);
     background-size: 100px;
     height: 58px;
-    transition-duration: .8s;
+    transition-duration: 1.5s;
 }
 
 .eye{
     background-position-y: 0;
+    opacity: 1;
 }
 .eye10{
     background-position-y: -810px;
@@ -110,4 +217,83 @@
 .bell3{
     background-position-y: -67px;
     margin-bottom: 7px;
+}
+
+@media only screen and (max-width: 750px){
+ 
+    .root{
+        top: 12%;
+    }
+
+    
+}
+
+@media only screen and (max-width: 515px){
+    .root{
+        padding: 0 20px;
+    }
+    .firsteye{
+        background-image: url(images/eye.png);
+        width: 50px;
+        height: 29px;
+        background-size: 50px;
+        opacity: 1;
+        transition: all .5s ease-in-out;
+        margin-top: -5px;
+    }   
+    .volume, .volume1, .volume2, .volume3{
+        width: 20px;
+        height: 16px;
+        background-size: 20px;        
+    }
+    .volume1{
+        background-position-y: 0;
+    }
+    .volume2{
+        background-position-y: -15px;
+    }
+    .volume3{
+        background-position-y: -45px;
+    }
+    .volume4{
+        background-position-y: -30px;
+    }
+    .bell1, .bell2, .bell3{
+        background-image: url(images/bellicons.png);
+        width: 20px;
+        height: 25px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        background-size: 20px;
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    
+    .bell1{
+        background-position-y: 0px;
+    }
+    
+    .bell2{
+        background-position-y: -30px;
+    }
+    
+    .bell3{
+        background-position-y: -55px;
+        margin-bottom: 7px;
+    }
+    .lang{
+        h2{
+            cursor: pointer;
+            font-size: 10px;
+            margin-right: 10px;
+            border: 1px solid #fff;
+            padding: 5px;
+            border-radius: 3px;
+            color: #FFF;
+            font-weight: normal;
+            margin-top: -3px;
+        }
+    }
 }

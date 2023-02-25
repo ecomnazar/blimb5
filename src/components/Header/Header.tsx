@@ -329,11 +329,11 @@ const onClickBack = () => {
         <div className="header">
             <div className="row">
                 <div>
-                    <div onClick={onClickBack} className={hide ? 'eyebackground eye1' : 'eyebackground eye3'}></div>
+                    {/* <div onClick={onClickBack} className={hide ? 'eyebackground eye1' : 'eyebackground eye3'}></div> */}
                     {/* <img className={hide ? 'eye eye1' : 'eye eye3'} onClick={onClickBack} src="images/eye.png" alt="" /> */}
                     <div className={hideVolume ? 'showVolume' : 'hideVolume'}>
-                        <input className='volume' onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' />
-                        <input className='volume volume3' onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' />
+                        {/* <input className='volume' onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' /> */}
+                        {/* <input className='volume volume3' onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' /> */}
                     </div>
                 </div>
                 <div className='row2'>
@@ -365,7 +365,7 @@ const onClickBack = () => {
 
 
 
-            <Params volume={volume} setHideVolume={setHideVolume} onClickIndex1={onClickIndex1} onClickIndex2={onClickIndex2} onClickIndex3={onClickIndex3} onClickLanguage={onClickLanguage} activeIndex={activeIndex} hide={hide}/>
+            <Params volume={volume} setHideVolume={setHideVolume} onClickIndex1={onClickIndex1} onClickIndex2={onClickIndex2} onClickIndex3={onClickIndex3} onClickLanguage={onClickLanguage} activeIndex={activeIndex} hide={hide} rangeChange={rangeChange} onClickBack={onClickBack} hideVolume={hideVolume} songIndex={songIndex}/>
 
 
 
