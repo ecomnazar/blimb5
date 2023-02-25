@@ -333,6 +333,7 @@ const onClickBack = () => {
                     {/* <img className={hide ? 'eye eye1' : 'eye eye3'} onClick={onClickBack} src="images/eye.png" alt="" /> */}
                     <div className={hideVolume ? 'showVolume' : 'hideVolume'}>
                         <input className='volume' onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' />
+                        <input className='volume volume3' onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' />
                     </div>
                 </div>
                 <div className='row2'>

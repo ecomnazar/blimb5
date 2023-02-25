@@ -15,11 +15,15 @@ $color3: #333;
     transition: all .5s ease-in-out;
 }
 
-.volume {
+.volume, .volume3 {
     position: absolute;
     top: 35%;
     right: 0%;
     transform: rotate(270deg);
+}
+
+.volume3{
+    z-index: 99;
 }
 
 .volume2{
