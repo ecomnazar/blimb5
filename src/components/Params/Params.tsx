@@ -14,7 +14,7 @@ interface ParamsProps{
     rangeChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
     onClickBack: () => void,
     hideVolume: boolean,
-    songIndex: number
+    songIndex: number | undefined
 }
 
 
@@ -55,7 +55,7 @@ const Params = ({ volume, setHideVolume, onClickIndex1, onClickIndex2, onClickIn
     }
 
     const onCapture = () => {
-        songIndex === 0 && onClickIndex1()
+        songIndex === 2 && onClickIndex1()
         songIndex === 1 && onClickIndex2()
         songIndex === 3 && onClickIndex3()
     }
