@@ -41,35 +41,14 @@ export const Header = ({
 
   let audio = new Audio(songList[audiotype]);
 
-  const soundPlay2 = () => {
-    const Sounds = new Howl({
-      src: song2,
-      volume: volume / 100,
-    });
-    Sounds.play();
-  };
-
-  const soundPlay3 = () => {
-    const Sounds = new Howl({
-      src: song,
-      volume: volume / 100,
-    });
-    Sounds.play();
-  };
-
-  const soundPlay4 = () => {
-    const Sounds = new Howl({
-      src: song,
-      volume: 0,
-    });
-    Sounds.play();
-  };
 
   //BIRNJI BELL ICON
   const onClickIndex1 = () => {
     setSongIndex(0);
     setRingHide(false);
-    soundPlay3();
+  let audio = new Audio(songList[0]);
+    audio.play()
+    audio.volume = volume / 100
     setAudioType(0);
   };
 
@@ -78,13 +57,16 @@ export const Header = ({
   const onClickIndex2 = () => {
     setSongIndex(1);
     setRingHide(false);
-    soundPlay2();
     setAudioType(1);
+  let audio = new Audio(songList[1]);
+    audio.play()
+    audio.volume = volume / 100
 
   };
 
   const onClickIndex3 = () => {
-    soundPlay4();
+    audio.play()
+    audio.volume = 0
   };
 
   const languages = ["Ru", "En", "Ua"];
@@ -132,10 +114,6 @@ export const Header = ({
 
   //IKINJI PAGE START
   const onClickStart2 = () => {
-
-    let audio = new Audio(songList[audiotype])
-    console.log(audiotype + 'asd')
-
     setHide1(false);
     setHide14(false);
     setHide2(true);
@@ -378,6 +356,7 @@ export const Header = ({
           onClickBack={onClickBack}
           hideVolume={hideVolume}
           songIndex={songIndex}
+          songList={songList}
         />
 
         <Recommened

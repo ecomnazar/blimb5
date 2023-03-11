@@ -14,11 +14,12 @@ interface ParamsProps{
     rangeChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
     onClickBack: () => void,
     hideVolume: boolean,
-    songIndex: number | undefined
+    songIndex: number | undefined,
+    songList: string[],
 }
 
 
-const Params = ({ volume, setHideVolume, onClickIndex1, onClickIndex2, onClickIndex3, onClickLanguage, activeIndex, hide, rangeChange, onClickBack, hideVolume, songIndex }: ParamsProps) => {
+const Params = ({ volume, setHideVolume, onClickIndex1, onClickIndex2, onClickIndex3, onClickLanguage, activeIndex, hide, rangeChange, onClickBack, hideVolume, songIndex, songList }: ParamsProps) => {
 
     const [selectedBell, setSelectedBell] = React.useState(0)
     const [visibleIcons, setVisibleIcons] = React.useState(false)
@@ -55,9 +56,9 @@ const Params = ({ volume, setHideVolume, onClickIndex1, onClickIndex2, onClickIn
     }
 
     const onCapture = () => {
-        songIndex === 2 && onClickIndex1()
-        songIndex === 1 && onClickIndex2()
-        songIndex === 3 && onClickIndex3()
+            let audio = new Audio(songList[selectedBell]);
+            audio.volume = volume / 100
+            audio.play();
     }
 
     return (
