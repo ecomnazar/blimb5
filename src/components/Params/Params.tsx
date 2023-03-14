@@ -80,6 +80,10 @@ const Params = ({
   if(hide == true){
       eyeclass += ' active'
   }
+  if(hide == false){
+    eyeclass = 'eye'
+    eyeclass += ' disabled'
+}
 
   return (
     <>
