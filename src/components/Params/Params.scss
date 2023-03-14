@@ -49,3 +49,63 @@
         opacity: 1;
     }
 }
+
+.minie{
+    width: 90px;
+    height: 52px;
+    opacity: 0;
+    background-size: 100%;
+    background-image: url(images/minieye.png);
+    background-position: 0 0;
+    cursor: default;
+    transition-property: opacity;
+    transition-duration: 1s;
+    z-index: 1;
+}
+
+.minie.active {
+    opacity: 0.6;
+    animation: miniopenclipeyes 0.8s steps(14) 1;
+    cursor: pointer;
+}
+
+.minie.active:hover {
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.minie.disabled {
+    animation: miniclipeyes 0.2s steps(14) 1;
+}
+
+@keyframes miniclipeyes {
+    0% {
+        background-position: 0 0;
+        opacity: 0.6;
+    }
+    
+    100% {
+        background-position: 0 -700px;
+        opacity: 0;
+    }   
+}
+
+@keyframes miniopenclipeyes {
+    0% {
+        background-position: 0 -700px;
+        opacity: 0;
+    }
+    
+    60% {
+        background-position: 0 -700px;
+        opacity: 0;
+    }
+    100% {
+        background-position: 0 0;
+        opacity: 0.6;
+    }
+}

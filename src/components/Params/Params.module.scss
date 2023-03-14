@@ -23,17 +23,6 @@
     position: relative;
 }
 
-.firsteye{
-    background-image: url(images/eye.png);
-    width: 70px;
-    height: 40px;
-    background-size: 70px;
-    opacity: 1;
-    transition: all .5s ease-in-out;
-    margin-top: -5px;
-    cursor: pointer;
-}
-
 
 .inp{
     transform: rotate(270deg);
@@ -73,51 +62,6 @@
     }
 }
 
-.inp[type=range], .inpHide[type=range] {
-    margin: 10px 0;
-    background: transparent;
-    border: 1px solid #fff;
-    -webkit-appearance: none;
-    border-radius: 50px;
-    overflow-y: hidden;
-}
-  .inp[type=range]:focus, .inpHide[type=range]:focus {
-    background: transparent;
-    border: 1px solid #fff;
-}
-  .inp[type=range]::-webkit-slider-runnable-track, .inpHide[type=range]::-webkit-slider-runnable-track {
-    height: 10px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: transparent;
-    border-radius: 5px;
-    outline: none;
-    border: 1px solid transparent;
-  }
-  .inp[type=range]::-webkit-slider-thumb, .inpHide[type=range]::-webkit-slider-thumb {
-    height: 30px;
-    width: 12px;
-    border-radius: 3px;
-    background: #333;
-    cursor: pointer;
-    -webkit-appearance: none;
-    position: relative;
-    box-shadow: -107px 0px 0px 100px whitesmoke; 
-    margin-top: -11px;
-    opacity: .8;
-    &:hover{
-        opacity: 1;
-    }
-  }
-  .inp[type=range]:focus::-webkit-slider-runnable-track, .inpHide[type=range]:focus::-webkit-slider-runnable-track {
-    background: transparent;
-  
-}
-
-.firsteyeHide{
-    opacity: 0;
-    transition: all .5s ease-in-out;
-}
 
 .lang{
     h2{

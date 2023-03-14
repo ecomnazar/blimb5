@@ -76,23 +76,27 @@ const Params = ({
 
 
   let eyeclass = 'eye'
+  let minieyeclass = 'minie'
 
   if(hide == true){
       eyeclass += ' active'
+      minieyeclass += ' active'
   }
   if(hide == false){
     eyeclass = 'eye'
     eyeclass += ' disabled'
+    minieyeclass = 'minie'
+    minieyeclass += ' disabled'
 }
+
+
 
   return (
     <>
       <div className={eyeclass}></div>
       <div className={styles.root}>
-        <div
-          onClick={onClickBack}
-          className={hide ? styles.firsteye : styles.firsteyeHide}
-        ></div>
+        {/* MINI EYE */}
+        <div className={minieyeclass} onClick={onClickBack}></div>
         <div className={styles.row}>
           <div className={styles.lang}>
             <h2 className={styles.langh2} onClick={onClickLanguage}>
