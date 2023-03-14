@@ -1,0 +1,31 @@
+.eye{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(images/eye.png);
+    width: 170px;
+    height: 100px;
+    background-position: 0 0;
+    background-size: 100%;
+    transition-property: left, top, margin-left, width, height, margin-top;
+    transition-duration: .7s;
+    opacity: 1;
+}
+
+
+.eye.active{
+    opacity: 0;
+    animation: clipeyes 0.2s steps(10) 1;
+}
+
+@keyframes clipeyes {
+    0%{
+        background-position: 0 0;
+        opacity: 1;    
+    }
+    100% {
+        background-position: 0 -947px;
+        opacity: 0;
+    }
+}
