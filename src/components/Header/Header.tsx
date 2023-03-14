@@ -20,6 +20,7 @@ import ElevenRelax from "../Exercises/ElevenRelax";
 import TwelveGood from "../Exercises/TwelveGood";
 import ThirteenClock from "../Exercises/ThirteenClock";
 import Recommened from "../Exercises/Recommened";
+import Volume from "../Volume/Volume";
 interface HeaderProps {
   langData: IData[];
   activeIndex: number;
@@ -342,6 +343,15 @@ export const Header = ({
           </div>
         </div>
         {/*  */}
+
+
+
+
+
+        <Volume hideVolume={hideVolume} songList={songList} audiotype={audiotype} volume={volume} setVolume={setVolume}/>
+
+
+
 
         <Params
           volume={volume}

@@ -91,7 +91,7 @@ const Params = ({ volume, setHideVolume, onClickIndex1, onClickIndex2, onClickIn
     {volume <= 60 && volume >= 30 ? <div onClick={() => setHideVolume(prev => !prev)} className={styles.volume2}></div> : ''}
     {volume <= 100 && volume >= 61 ? <div onClick={() => setHideVolume(prev => !prev)} className={styles.volume1}></div> : ''}
     <div className={styles.inpPosition}>
-        <input onClickCapture={onCapture} className={hideVolume ? styles.inp : styles.inpHide} onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' />
+        {/* <input onClickCapture={onCapture} className={hideVolume ? styles.inp : styles.inpHide} onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' /> */}
     </div>
 </div>
 </div>

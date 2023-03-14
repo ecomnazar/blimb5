@@ -1,0 +1,85 @@
+.rootVolume{
+    position: fixed;
+    top: 25%;
+    right: 42px;
+    z-index: 999;
+}
+
+.volumeLine{
+    position: relative;
+    width: 20px;
+    visibility: visible;
+    opacity: 0.8;
+    transition: all .3s ease-in-out;
+    &:hover{
+        opacity: 1;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.volumeLineHide{
+    position: relative;
+    width: 20px;
+    transition: all .3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    &:hover{
+        opacity: 1;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.dataVolume{
+    height: 8px;
+    z-index: 99;
+    position: relative;
+    cursor: pointer;
+}
+
+.dataVolumeActive{
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 99;
+    position: relative;
+    cursor: pointer;
+}
+
+.volumeLine .before{
+    content: '';
+    position: absolute;
+    width: 7px;
+    bottom: 0%;
+    left: 30%;
+    display: block;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #fff;
+    z-index: 50;
+}
+
+.volumeLine .after{
+    z-index: 20;
+    content: '';
+    position: absolute;
+    width: 7px;
+    bottom: 0;
+    left: 30%;
+    display: block;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 750px){
+    .rootVolume{
+        top: 18%;
+    }
+}
+
+@media only screen and (max-width: 515px){
+    .rootVolume{
+        right: 20px;
+    }
+}
