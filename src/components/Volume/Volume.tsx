@@ -79,12 +79,22 @@ const Volume = ({ volume, songList, audiotype, setVolume, hideVolume }: VolumePa
       audio.volume = 0
   }
   
+  const onChangeInput = (e: any) => {
+    setActiveDataVolume(e.target.value)
+    console.log(e.target.value)
+    audio.play();
+    audio.volume = e.target.value / 10
+  }
+
+  React.useEffect(() => {
+    
+  }, [activeDataVolume])
 
 
   return (
     <div className='rootVolume'>
       <div className={hideVolume ? 'volumeLine' : 'volumeLineHide'}>
-        <div onClickCapture={onCapture} onClick={onClick10} className={activeDataVolume == 10 ? 'dataVolume dataVolumeActive' : 'dataVolume'} data-volume='1'></div>
+        <div  onClickCapture={onCapture} onClick={onClick10} className={activeDataVolume == 10 ? 'dataVolume dataVolumeActive' : 'dataVolume'} data-volume='1'></div>
         <div onClickCapture={onCapture} onClick={onClick9} className={activeDataVolume == 9 ? 'dataVolume dataVolumeActive' : 'dataVolume'} data-volume='0.9'></div>
         <div onClickCapture={onCapture} onClick={onClick8} className={activeDataVolume == 8 ? 'dataVolume dataVolumeActive' : 'dataVolume'} data-volume='0.8'></div>
         <div onClickCapture={onCapture} onClick={onClick7} className={activeDataVolume == 7 ? 'dataVolume dataVolumeActive' : 'dataVolume'} data-volume='0.7'></div>
@@ -97,6 +107,7 @@ const Volume = ({ volume, songList, audiotype, setVolume, hideVolume }: VolumePa
         <div className='before' style={{height: `${activeDataVolume + '0'}%`}}></div>
         <div className='after'></div>
       </div>
+      <input type="range" min={1} max={10} onChange={(e) => onChangeInput(e)} />
     </div>
   )
 }
