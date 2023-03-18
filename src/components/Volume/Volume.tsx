@@ -84,6 +84,7 @@ const Volume = ({ volume, songList, audiotype, setVolume, hideVolume }: VolumePa
     console.log(e.target.value)
     audio.play();
     audio.volume = e.target.value / 10
+    setVolume(e.target.value)
   }
 
   React.useEffect(() => {
