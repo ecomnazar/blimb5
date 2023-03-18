@@ -74,17 +74,22 @@ const Volume = ({ volume, songList, audiotype, setVolume, hideVolume }: VolumePa
   }
   const onClick1 = () => {
     setActiveDataVolume(1)
-    setVolume(10)
+    setVolume(100)
     audio.play();
       audio.volume = 0
   }
   
   const onChangeInput = (e: any) => {
     setActiveDataVolume(e.target.value)
-    console.log(e.target.value)
     audio.play();
-    audio.volume = e.target.value / 10
-    setVolume(e.target.value)
+    if(e.target.value == 1){
+      audio.volume = 0
+      setVolume(0)
+    } else{
+      setVolume(e.target.value)
+      audio.volume = e.target.value / 100
+    }
+
   }
 
   React.useEffect(() => {
